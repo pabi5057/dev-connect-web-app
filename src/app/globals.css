@@ -120,3 +120,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* globals.css */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #999595; /* Tailwind pink-500 */
+  border-radius: 2px;
+}
