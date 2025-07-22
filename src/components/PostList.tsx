@@ -79,7 +79,7 @@ export default function PostList() {
     return () => observer.disconnect();
   }, [loading, hasMore]);
 
-  const handleLike = async (postId: string) => {
+  const handleLike = async ({ postId }: { postId: string }) => {
     try {
       const res = await axios.post(`/api/posts/${postId}/like`);
       const { liked } = res.data;
