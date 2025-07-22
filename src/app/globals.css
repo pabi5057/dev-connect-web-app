@@ -129,6 +129,6 @@
   background: #f0f0f0;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #999595; /* Tailwind pink-500 */
+  background-color: #999595; 
   border-radius: 2px;
 }

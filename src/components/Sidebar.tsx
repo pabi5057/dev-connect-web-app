@@ -5,6 +5,9 @@ import { Button } from "./ui/button"
 import { useState } from "react"
 import ProfileSection from "@/features/profile/profile-section"
 
+import { useSession } from "next-auth/react"
+import { ProfileInfo } from "@/types/profile.type"
+
 const users = [
     {
         id: 1,
@@ -30,7 +33,8 @@ const users = [
 ]
 
 export default function Sidebar() {
-    const [userList, setUserList] = useState(users)
+    const [userList, setUserList] = useState(users);
+    const { data: session, status } = useSession();
 
     const toggleFollow = (id: number) => {
         setUserList(prev =>
@@ -40,10 +44,11 @@ export default function Sidebar() {
         )
     }
 
+
     return (
         <aside className="w-full lg:w-80 h-full max-h-[calc(100vh-100px)] overflow-y-auto border-l bg-gray-50 p-4 hidden md:block rounded-md shadow-sm">
             {/* Top Profile Section */}
-            <ProfileSection />
+            {session?.user && <ProfileSection user={session?.user} />}
 
             {/* Suggestion Header */}
             <div className="flex items-center justify-between mt-6 mb-3">

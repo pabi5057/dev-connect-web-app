@@ -13,6 +13,7 @@ export default async function Home() {
     <>
       <div className="w-full sm:w-[90%] lg:w-[70%] mx-auto mt-4 flex flex-col lg:flex-row gap-6 px-2">
         {/* Posts section */}
+        
         <main className="w-full lg:w-2/3 h-[calc(100vh-100px)] overflow-y-auto pr-2">
           <PostList />
         </main>

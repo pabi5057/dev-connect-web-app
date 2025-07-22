@@ -9,7 +9,7 @@ export const profileSchema = z.object({
     dob: z.string().min(1, "Date of birth is required"),
     profilePicture: z
         .any()
-        .refine((file) => file?.[0], "Profile picture is required"),
+        .refine((file) => file?.[0], "Profile picture is required").optional(),
 });
 
 export type ProfileFormValues=z.infer<typeof profileSchema>

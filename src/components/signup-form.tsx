@@ -94,18 +94,17 @@ const SignupForm = () => {
                 </div>
                 <div className="flex gap-4">
                     <div className="w-1/2">
-                        <Label className="mb-2">Password</Label>
-                        <Input {...register("password")} placeholder="Enter password" />
-                        {errors.password && (
-                            <p className="text-sm text-red-500">{errors.password.message}</p>
-                        )}
-                    </div>
-
-                    <div className="w-1/2">
                         <Label className="mb-2">Email</Label>
                         <Input type="email" {...register("email")} placeholder="Enter Email" />
                         {errors.email && (
                             <p className="text-sm text-red-500">{errors.email.message}</p>
+                        )}
+                    </div>
+                    <div className="w-1/2">
+                        <Label className="mb-2">Password</Label>
+                        <Input {...register("password")} placeholder="Enter password" />
+                        {errors.password && (
+                            <p className="text-sm text-red-500">{errors.password.message}</p>
                         )}
                     </div>
                 </div>

@@ -7,6 +7,8 @@ const userSchema = new Schema({
     email: { type: String, unique: true },
     password: String,
     profilePicture: String,
+    contact:String,
+    dob:String,
 }, { timestamps: true });
 
 const User = models.User || model("User", userSchema);
