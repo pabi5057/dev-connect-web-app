@@ -1,9 +1,9 @@
 import { connectDB } from "@/lib/config/db";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../auth/[...nextauth]/route";
 import { NextResponse } from "next/server";
 import cloudinary from "@/lib/cloudinary";
 import Post from "@/lib/models/Post";
+import { authOptions } from "@/lib/auth/options";
 
 
 const uploadToCloudinary = async (file: File): Promise<string> => {

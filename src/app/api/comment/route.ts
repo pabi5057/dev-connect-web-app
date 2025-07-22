@@ -1,8 +1,8 @@
 import { connectDB } from "@/lib/config/db";
 import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
-import { authOptions } from "../auth/[...nextauth]/route";
 import Comment from "@/lib/models/Comment";
+import { authOptions } from "@/lib/auth/options";
 
 
 

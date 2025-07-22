@@ -4,7 +4,8 @@ import { AuthOptions } from "next-auth";
 
 import bcrypt from "bcryptjs";
 import User from "./models/User";
-import {connectDB} from "./config/db.ts"
+import { connectDB } from "./config/db";
+
 
 export const authOptions: AuthOptions = {
   providers: [

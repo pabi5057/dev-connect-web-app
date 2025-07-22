@@ -1,9 +1,9 @@
-// /app/api/me/route.ts
+
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
 import { connectDB } from "@/lib/config/db";
 import User from "@/lib/models/User";
 import { NextResponse } from "next/server";
+import { authOptions } from "@/lib/auth/options";
 
 export async function GET() {
   await connectDB();
