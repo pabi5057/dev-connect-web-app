@@ -141,7 +141,7 @@ export default function PostList() {
 
             <div className="flex items-center justify-between mt-2">
               <div className="flex items-center gap-3">
-                <button onClick={() => handleLike(post._id)}>
+                <button onClick={() => handleLike({postId:String(post._id)})}>
                   <Heart
                     className={`w-5 h-5 transition-colors ${isLiked ? "fill-red-500 text-red-500" : "text-gray-600"
                       }`}
